@@ -1,0 +1,58 @@
+<!doctype html>
+<html> 
+    <head>
+    <h1 style="font-weight:bold;"> User Sign up </h1>
+
+    <style>
+
+    body {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    display: inline-block;
+    border: none;
+    background-color: white;
+     }
+
+   form { display: table;}
+
+   div {display: table-row;
+   padding-bottom: 20px;}
+
+   label {display: table-cell;
+   white-space:nowrap;}
+
+   input {display: table-cell;}
+
+    </style>
+    <body>
+    
+    <form action="/welcome" method="post"/>
+    <div>
+    <label for="username"> Username:</label>
+    <input id="username" type="text"  value="{{username}}" name="username"/>
+    <span style="color: red;">{{error}}</span>
+    </div>
+    <div>
+    <label for="password"> Password:</label>
+    <input type="password"  id="password" name="password" required/>
+    </div>
+    <div>
+    <label for="verify password"> Verify Password: </label>
+    <input type="password"  id="confirm_password" name="verify password" required/>
+    <span style="color: red;">{{password_error}}</span>
+    </div>
+    <div>
+    <label for="Email"> Email: </label>
+    <input type="email"  id="email" name="email" value="{{email}}" required/>
+    </div>
+    <div>
+    <input type="submit" name="submit_button" Value="Submit"/>
+    </div>
+    </body>
+
+
+</head>
+</body>
+</html>
